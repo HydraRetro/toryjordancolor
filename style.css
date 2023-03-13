@@ -5,6 +5,8 @@
 body {
     color: #8996a0;
     background-color: #004065;
+
+    box-sizing: border-box;
 }
 
 /* HEADER */
@@ -22,8 +24,6 @@ body {
 
 
 
-
-
 /* FOOTER */
 
 /* GITHUB ICON */
@@ -32,7 +32,7 @@ body {
 }
 
 .icon:hover {
-    stroke: gold;
+    stroke: #ef8200;
     transform: rotate(3.142rad);
     transition: 300ms;
 }
