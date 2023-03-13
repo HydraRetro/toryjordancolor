@@ -1,0 +1,38 @@
+* {
+    font-family: 'Darker Grotesque', sans-serif;
+}
+
+body {
+    color: #8996a0;
+    background-color: #004065;
+}
+
+/* HEADER */
+.nav-link:hover {
+    color: #ef8200;
+}
+
+
+/* VIDEO CONTAINER */
+
+#showreelText {
+    transform: rotate(90deg);
+}
+
+
+
+
+
+
+/* FOOTER */
+
+/* GITHUB ICON */
+.icon {
+    color: whitesmoke;
+}
+
+.icon:hover {
+    stroke: gold;
+    transform: rotate(3.142rad);
+    transition: 300ms;
+}
