@@ -7,153 +7,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/CSS/styles.css">
-    <title>ToryJordanColor | Color</title>
+    <title>color</title>
 </head>
 
 <body>
     <!-- HEADER -->
-    <nav class="navbar navbar-expand-lg container-fluid fs-5">
-        <div class="container-fluid fs-5">
-            <a class="navbar-brand px-5" href="index.html">
-                <img src="/IMAGES/logos/HydraRetro_Cartoon_BLUE.png" alt="Bootstrap" width="100">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="container collapse navbar-collapse justify-content-end align-items-center text-center "
-                id="navbarNavAltMarkup">
-                <a class="nav-link px-3" aria-current="page" href="/index.html">HOME</a>
-                <a class="nav-link px-3" href="/HTML/color.html">COLOR</a>
-                <a class="nav-link px-3" href="/HTML/about.html">ABOUT</a>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">toryjordancolor.</a></div>
+            <ul class="links">
+                <li><a href="/index.html">home.</a></li>
+                <li><a href="/HTML/color.html">color.</a></li>
+                <li><a href="/HTML/about.html">about.</a></li>
+            </ul>
+            <a href="#" class="actionButton">contact.</a>
+            <div class="toggleButton">
+                <svg xmlns="http://www.w3.org/2000/svg" class="iconMenu" width="24" height="24" viewBox="0 0 24 24"
+                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M4 6l16 0"></path>
+                    <path d="M4 12l16 0"></path>
+                    <path d="M4 18l16 0"></path>
+                </svg>
             </div>
         </div>
-    </nav>
+        <div class="dropdownMenu">
+            <li><a href="/index.html">home.</a></li>
+            <li><a href="/HTML/color.html">color.</a></li>
+            <li><a href="/HTML/about.html">about.</a></li>
+            <li><a href="#" class="actionButton">contact.</a></li>
+        </div>
+    </header>
 
-    <!-- TITLE -->
-    <div class="container my-5">
-        <h1>COLOR.</h1>
+    <!-- Film 1 -->
+    <div class="colorTitle">
+        <h1>color.</h1>
     </div>
-
-    <!-- FILM 01 -->
-    <div class="container">
-        <!-- Film-Header - 1640x664 -->
-        <img src="/IMAGES/films/headers/BetaTest_Website_Header.jpg" class="img-fluid" alt="...">
-    </div>
-    <div class="container">
-        <div class="card my-3 mx-5" style="background: none; border: none;">
-            <div class="row g-0">
-                <div class="col-md-8 d-flex justify-content-center align-items-center">
-                    <div class="card-body mx-5">
-                        <!-- Title -->
-                        <h2 class="card-title fs-1">The Beta Test</h2>
-                        <!-- Details -->
-                        <h4 class="card-text">Horror | 1h 33m | 2021</h4>
-                        <!-- Description -->
-                        <p class="card-text">An engaged Hollywood agent receives a mysterious letter for an anonymous
-                            sexual encounter and becomes ensnared in a sinister world of lying, infidelity, and digital
-                            data.</p>
-                        <!-- Starring -->
-                        <h4 class="card-title">Starring</h4>
-                        <p class="card-text">Jim Cummings, PJ McCabe</p>
-                        <!-- Trailer Link -->
-                        <a class="btn btn-dark" href="https://www.youtube.com/watch?v=R7cUSsLjdM0" target="_blank"
-                            role="button">Trailer</a>
-                        <!-- Watch Link -->
-                        <a class="btn btn-dark"
-                            href="https://www.hulu.com/movie/the-beta-test-f587eb1d-3cab-4f27-97e9-5a788fe4bb71"
-                            target="_blank" role="button">Watch Now</a>
-                    </div>
-                </div>
-                <!-- Poster - 304x450 -->
-                <div class="col-md-4">
-                    <img src="/IMAGES/films/posters/BetaTest_Website_Poster.jpg" class="img-fluid" alt="...">
-                </div>
+    <div class="filmShowcase">
+        <div class="filmBanner">
+            <img src="/IMAGES/films/headers/BetaTest_Website_Header.jpg" alt="">
+        </div>
+        <div class="filmDetails">
+            <div class="filmInfo">
+                <h2>The Beta Test</h2>
+                <h3>Horror | 1h 33m | 2021</h3>
+                <p>An engaged Hollywood agent receives a mysterious letter for an anonymous sexual encounter and becomes
+                    ensnared in a sinister world of lying, infidelity, and digital data.</p>
+                <h3>Directed By:</h3>
+                <p>Jim Cummings, PJ McCabe</p>
+                <a href="#"><button>TRAILER</button></a>
+                <a href="#"><button>WATCH NOW</button></a>
+            </div>
+            <div class="filmPoster">
+                <img src="/IMAGES/films/posters/BetaTest_Website_Poster.jpg" alt="">
             </div>
         </div>
     </div>
 
-    <br>
+    <!-- VIDEO GALLERY -->
+    <!-- <div class="container">
+        <h1>Video Gallery</h1>
 
-    <!-- FILM 02 -->
-    <div class="container">
-        <!-- Film-Header - 1640x664 -->
-        <img src="/IMAGES/films/headers/SleepStudy_Website_Header.jpg" class="img-fluid" alt="...">
-    </div>
-    <div class="container">
-        <div class="card my-3 mx-5" style="background: none; border: none;">
-            <div class="row g-0">
-                <div class="col-md-8 d-flex justify-content-center align-items-center">
-                    <div class="card-body mx-5">
-                        <!-- Title -->
-                        <h2 class="card-title fs-1">Sleep Study</h2>
-                        <!-- Details -->
-                        <h4 class="card-text">Horror | 10m 30s | 2022</h4>
-                        <!-- Description -->
-                        <p class="card-text">A restless new mother confronts a dangerous terror whenever she tries to
-                            sleep.</p>
-                        <!-- Starring -->
-                        <h4 class="card-title">Directed By:</h4>
-                        <p class="card-text">Natalie Metzger</p>
-                        <!-- Trailer Link -->
-
-                        <!-- Watch Link -->
-                        <a class="btn btn-dark" href="https://www.hulu.com/watch/7f112b65-912e-40ee-8e51-b383ad6184ee"
-                            target="_blank" role="button">Watch Now</a>
-                    </div>
-                </div>
-                <!-- Poster - 304x450 -->
-                <div class="col-md-4">
-                    <img src="/IMAGES/films/posters/SleepStudy_Website_Poster.jpg" class="img-fluid" alt="...">
-                </div>
-            </div>
+        <div class="videoContainer">
+            <div class="video"><video src=""><iframe width="2301" height="1109" src="https://www.youtube.com/embed/Vx2161O2hdc"
+                title="How to Make an Espresso Martini Cocktail | Grey Goose Vodka" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe></video></div>
+            <div class="video"><video src="https://www.youtube.com/watch?v=dgQp9HmNQZI" muted></video></div>
+            <div class="video"><video src="https://www.youtube.com/watch?v=LoZ9YcYZ58w&t=22s" muted></video></div>
+            <div class="video"><video src="https://youtu.be/Vx2161O2hdc" muted></video></div>
+            <div class="video"><video src="https://youtu.be/Vx2161O2hdc" muted></video></div>
+            <div class="video"><video src="https://youtu.be/Vx2161O2hdc" muted></video></div>
         </div>
-    </div>
-
-    <br>
-
-    <!-- FILM 03 -->
-    <div class="container">
-        <!-- Film-Header - 1640x664 -->
-        <img src="/IMAGES/films/headers/IMMORTAL_Website_Header.jpg" class="img-fluid" alt="...">
-    </div>
-    <div class="container">
-        <div class="card my-3 mx-5" style="background: none; border: none;">
-            <div class="row g-0">
-                <div class="col-md-8 d-flex justify-content-center align-items-center">
-                    <div class="card-body mx-5">
-                        <!-- Title -->
-                        <h2 class="card-title fs-1">Immortal</h2>
-                        <!-- Details -->
-                        <h4 class="card-text">Horror | 10m | 2020</h4>
-                        <!-- Description -->
-                        <p class="card-text">When her experiment is discovered, a brilliant geneticist on the verge of a
-                            breakthrough that could change humanity must make an impossible choice.</p>
-                        <!-- Starring -->
-                        <h4 class="card-title">Directed By:</h4>
-                        <p class="card-text">Natalie Metzger, Robert Allaire</p>
-                        <!-- Trailer Link -->
-                        <a class="btn btn-dark" href="https://www.youtube.com/watch?v=P2RlPX-fppE" target="_blank"
-                            role="button">Trailer</a>
-                        <!-- Watch Link -->
-                        <a class="btn btn-dark" href="https://www.youtube.com/watch?v=CwE1j-mipkI" target="_blank"
-                            role="button">Watch Now</a>
-                    </div>
-                </div>
-                <!-- Poster - 304x450 -->
-                <div class="col-md-4">
-                    <img src="/IMAGES/films/posters/IMMORTAL_Website_Poster.jpg" class="img-fluid" alt="...">
-                </div>
-            </div>
+        <div class="popupVideo">
+            <span>&times;</span>
+            <iframe width="1280" height="720" src="https://www.youtube.com/embed/Vx2161O2hdc"
+                title="How to Make an Espresso Martini Cocktail | Grey Goose Vodka" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
         </div>
-    </div>
+    </div> -->
 
-    <!-- FOOTER -->
 
+
+
+    <!-- JavaScript -->
+    <script src="/JavaScript/script.js"></script>
 </body>
 
 </html>
