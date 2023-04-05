@@ -1,28 +1,329 @@
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Darker Grotesque', sans-serif;
 }
 
 body {
-    color: #8996a0;
-    /* background-color: #004065; */
+    height: 100vh;
+    color: whitesmoke;
     background-color: black;
-    box-sizing: border-box;
 }
 
-/* HEADER */
-.nav-link:hover {
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 1.5rem;
+}
+
+a:hover {
     color: #ef8200;
 }
 
-/* FOOTER */
+/* HEADER */
+header {
+    position: relative;
+    padding: 0 2.5rem;
+}
 
-/* GITHUB ICON */
-.icon {
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggleButton {
+    color: whitesmoke;
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+.actionButton {
+    background-color: #ef8200;
+    color: whitesmoke;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.actionButton:hover {
+    scale: 1.05;
     color: whitesmoke;
 }
 
-.icon:hover {
+.actionButton:active {
+    scale: 0.95;
+}
+
+/* DROPDOWN MENU */
+.dropdownMenu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdownMenu.open {
+    height: 240px;
+}
+
+.dropdownMenu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdownMenu .actionButton {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Hero */
+#myTitle {
+    height: calc(30vh - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 200px;
+    color: whitesmoke;
+
+    /* border: 1px solid red; */
+}
+
+#myTitle h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.reel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* border: 1px solid red; */
+}
+
+/* SHOWCASE GALLERY */
+.showcaseGallery {
+    margin: 100px 0px;
+}
+
+.galleryContainer {
+    height: 20em;
+    width: 60em;
+    display: flex;
+    margin: auto;
+    gap: 4px;
+    transition: all 2s linear;
+}
+
+.galleryContainer>div {
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center;
+    /* border-radius: 0.9em; */
+    flex: 1;
+    transition: all 1s ease;
+}
+
+.galleryContainer>div:hover {
+    flex: 4
+}
+
+.bg-1 {
+    background-image: url(/IMAGES/films/posters/BetaTest_Website_Poster.jpg);
+}
+
+.bg-2 {
+    background-image: url(/IMAGES/films/posters/IMMORTAL_Website_Poster.jpg);
+}
+
+.bg-3 {
+    background-image: url(/IMAGES/films/posters/SleepStudy_Website_Poster.jpg);
+}
+
+.bg-4 {
+    background-image: url(/IMAGES/films/posters/BetaTest_Website_Poster.jpg);
+}
+
+.bg-5 {
+    background-image: url(/IMAGES/films/posters/SleepStudy_Website_Poster.jpg);
+}
+
+
+
+/* COLOR PAGE */
+.filmDetails {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* border: 1px solid red; */
+}
+
+/* VIDEO GALLERY */
+/* .container {
+    position: relative;
+    min-height: 100vh;
+    background: #334;
+}
+
+.container h1 {
+    color: whitesmoke;
+    text-align: center;
+    padding: 15px;
+    font-size: 40px;
+    font-weight: normal;
+}
+
+.container .videoContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.container .videoContainer .video {
+    height: 250px;
+    width: 350px;
+    border: 5px solid whitesmoke;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .7);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.container .videoContainer .video iframe {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+.container .videoContainer .video:hover iframe {
+    transform: scale(1.1);
+}
+
+.container .popupVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, .8);
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.container .popupVideo iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 750px;
+    border-radius: 5px;
+    border: 3px solid whitesmoke;
+    object-fit: cover;
+}
+
+.container .popupVideo span{
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    font-size: 50px;
+    color: whitesmoke;
+    font-weight: bolder;
+    z-index: 100;
+    cursor: pointer;
+
+} */
+
+
+
+
+
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 0;
+
+    /* border: 1px solid red; */
+}
+
+.socialIcon:hover {
     stroke: #ef8200;
     transform: rotate(3.142rad);
     transition: 300ms;
+}
+
+
+/* RESPONSIVE DESIGN */
+@media(max-width: 992px) {
+
+    .navbar .links,
+    .navbar .actionButton {
+        display: none;
+    }
+
+    .navbar .toggleButton {
+        display: block;
+    }
+
+    .dropdownMenu {
+        display: block;
+    }
+
+    /* Video Gallery */
+    .container .popupVideo iframe {
+        width: 95%;
+    }
+}
+
+@media (max-width: 576px) {
+    .dropdownMenu {
+        left: 2rem;
+        width: unset;
+    }
+
+    #myTitle {
+        margin-top: 200px;
+        padding: 0 30px;
+    }
 }
