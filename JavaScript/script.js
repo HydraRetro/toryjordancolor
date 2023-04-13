@@ -8,6 +8,30 @@ toggleButton.onclick = function () {
     const isOpen = dropDownMenu.classList.contains('open')
 }
 
+// FILM STILLS
+const galleryImgs = document.querySelectorAll('.stillsGallery-img');
+const stillsLightbox = document.querySelector('.stillsLightbox');
+const lightboxImg = document.querySelector('.stillsLightbox-img');
+const closeBtn = document.querySelector('.stillsClose');
+
+galleryImgs.forEach((img) => {
+    img.addEventListener('click', () => {
+        stillsLightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+    });
+});
+
+closeBtn.addEventListener('click', () => {
+    stillsLightbox.style.display = 'none';
+});
+
+stillsLightbox.addEventListener('click', (event) => {
+    if (event.target === stillsLightbox || event.target === lightboxImg) {
+        stillsLightbox.style.display = 'none';
+    }
+});
+
+
 // VIDEO GALLERY
 const videos = document.querySelectorAll('.video');
 const lightbox = document.querySelector('.lightbox');
@@ -49,6 +73,9 @@ videos.forEach(video => {
         video.click();
     });
 });
+
+
+
 
 
 
