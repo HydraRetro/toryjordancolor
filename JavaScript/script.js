@@ -45,7 +45,7 @@ videos.forEach(video => {
 
     video.addEventListener('click', () => {
         lightbox.style.display = 'flex';
-        lightboxVideo.setAttribute('src', `https://www.youtube.com/embed/${id}?autoplay=1`);
+        lightboxVideo.setAttribute('src', `https://www.youtube.com/embed/${id}?autoplay=0`);
     });
 
     closeButton.addEventListener('click', () => {
