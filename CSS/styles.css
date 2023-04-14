@@ -1,11 +1,8 @@
-* {
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Darker Grotesque', sans-serif;
-}
-
-body {
     height: 100vh;
     color: whitesmoke;
     background-color: rgb(13, 13, 13);
@@ -178,7 +175,7 @@ header {
     background-color: #ef8200;
 }
 
-/*/////////////////////////////////////////////////// Film Stills */
+/*/////////////////////////////////////////////////// FILM STILLS */
 .stillsGallery-img {
     cursor: pointer;
 }
@@ -217,17 +214,10 @@ header {
     cursor: pointer;
 }
 
-
-
 /*////////////////////////////////////////////////////// VIDEO GALLERY */
-.gallery {
-    display: flex;
-    /* flex-wrap: wrap; */
-    justify-content: space-between;
+.videoGallery {
     margin: 20px auto;
-    max-width: 1200px;
     gap: 30px;
-
 }
 
 .video {
@@ -238,6 +228,10 @@ header {
 
 .video img {
     width: 100%;
+}
+
+.video img:hover{
+    scale: 1.05;
 }
 
 .play-button {
@@ -291,7 +285,6 @@ header {
     height: 100%;
 }
 
-
 /*////////////////////////////////////////////////////// FOOTER */
 .socialIcon {
     stroke: #fff;
@@ -330,5 +323,9 @@ header {
     .filmDetails {
         display: block;
         text-align: center;
+    }
+
+    #filmThumbnail {
+        width: 200px;
     }
 }
