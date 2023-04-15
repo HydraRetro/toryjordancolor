@@ -112,6 +112,7 @@ header {
 /*////////////////////////////////////////////////////// SHOWCASE GALLERY */
 .showcaseGallery {
     margin: 100px 0px;
+    display: flex;
 }
 
 .galleryContainer {
@@ -230,13 +231,13 @@ header {
     width: 100%;
 }
 
-.video img:hover{
+.video img:hover {
     scale: 1.05;
 }
 
 .play-button {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80px;
