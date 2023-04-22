@@ -1,13 +1,3 @@
-// Dropdown Menu
-const toggleButton = document.querySelector('.toggleButton')
-const toggleButtonIcon = document.querySelector('.toggleButton i')
-const dropDownMenu = document.querySelector('.dropdownMenu')
-
-toggleButton.onclick = function () {
-    dropDownMenu.classList.toggle('open')
-    const isOpen = dropDownMenu.classList.contains('open')
-}
-
 // FILM STILLS
 const galleryImgs = document.querySelectorAll('.stillsGallery-img');
 const stillsLightbox = document.querySelector('.stillsLightbox');
@@ -30,7 +20,6 @@ stillsLightbox.addEventListener('click', (event) => {
         stillsLightbox.style.display = 'none';
     }
 });
-
 
 // VIDEO GALLERY
 const videos = document.querySelectorAll('.video');
@@ -74,7 +63,21 @@ videos.forEach(video => {
     });
 });
 
+// BACK TO TOP
+const topButton = document.getElementById("topBtn");
 
+window.onscroll = () => {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        topButton.style.display = "block";
+    } else {
+        topButton.style.display = "none";
+    }
+};
+
+const topFunction = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+};
 
 
 
