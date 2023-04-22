@@ -16,32 +16,36 @@
 
 <body>
     <!-- HEADER -->
-    <header>
-        <div class="navbar">
-            <div class="logo"><a href="/index.html">toryjordancolor.</a></div>
-            <ul class="links">
-                <li><a href="/index.html">home.</a></li>
-                <li><a href="/color.html">color.</a></li>
-                <li><a href="/about.html">about.</a></li>
-            </ul>
-            <a href="#" class="actionButton">contact.</a>
-            <div class="toggleButton">
-                <svg xmlns="http://www.w3.org/2000/svg" class="iconMenu" width="24" height="24" viewBox="0 0 24 24"
-                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M4 6l16 0"></path>
-                    <path d="M4 12l16 0"></path>
-                    <path d="M4 18l16 0"></path>
-                </svg>
+    <nav class="navbar navbar-expand-lg bg-transparent m-3">
+        <div class="container">
+            <a class="navbar-brand fs-3" id="navbarLogo" href="/index.html">toryjordancolor.</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav text-center text-lg-start" id="navbarText">
+                    <li class="nav-item">
+                        <a class="nav-link fs-3" href="/index.html" id="navbarText">home.</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-3" href="/color.html" id="navbarText">color.</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-3" href="/about.html" id="navbarText">about.</a>
+                    </li>
+                    <li class="nav-item d-lg-none">
+                        <div class="d-flex justify-content-center">
+                            <a class="btn border-0 fs-3" id="navbarText" href="/contact.html">contact.</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="ms-lg-auto d-none d-lg-flex">
+                <a class="btn border-0 fs-3" id="navbarText" href="/contact.html">contact.</a>
             </div>
         </div>
-        <div class="dropdownMenu">
-            <li><a href="/index.html">home.</a></li>
-            <li><a href="/color.html">color.</a></li>
-            <li><a href="/about.html">about.</a></li>
-            <li><a href="#" class="actionButton">contact.</a></li>
-        </div>
-    </header>
+    </nav>
 
     <!-- PAGE NAME -->
     <div class="container my-5 py-5">
@@ -108,11 +112,11 @@
 
     <!-- SHAPE DIVIDER -->
     <div class="container my-5 text-center">
-        <img src="/IMAGES/icons/arrow-down.svg" alt="film icon">
+        <a href="#sleepStudy"><img src="/IMAGES/icons/arrow-down.svg" alt="film icon"></a>
     </div>
 
     <!-- SLEEP STUDY -->
-    <div class="container">
+    <div class="container" id="sleepStudy">
         <img src="/IMAGES/films/headers/SleepStudy_Website_Header.jpg" class="img-fluid" alt="The Beta Test Header">
 
         <div class="d-flex justify-content-around align-items-center flex-column flex-md-row my-5">
@@ -168,11 +172,11 @@
 
     <!-- SHAPE DIVIDER -->
     <div class="container my-5 text-center">
-        <img src="/IMAGES/icons/arrow-down.svg" alt="film icon">
+        <a href="#hayseed"><img src="/IMAGES/icons/arrow-down.svg" alt="film icon"></a>
     </div>
 
     <!-- HAYSEED -->
-    <div class="container">
+    <div class="container" id="hayseed">
         <img src="/IMAGES/films/headers/HAYSEED_Website_Header.jpg" class="img-fluid" alt="The Beta Test Header">
 
         <div class="d-flex justify-content-around align-items-center flex-column flex-md-row my-5">
@@ -227,11 +231,11 @@
 
     <!-- SHAPE DIVIDER -->
     <div class="container my-5 text-center">
-        <img src="/IMAGES/icons/film_icon.svg" alt="film icon">
+        <a href="#videoGallery"><img src="/IMAGES/icons/film_icon.svg" alt="film icon"></a>
     </div>
 
     <!-- VIDEO GALLERY -->
-    <div class="videoGallery container d-flex justify-content-between">
+    <div class="videoGallery container d-flex justify-content-between" id="videoGallery">
         <div class="video" data-id="dgQp9HmNQZI">
             <img src="/IMAGES/films/thumbnails/GG_Choc_Thumbnail.jpg" alt="Grey Goose Chocolate Martini YouTube video">
             <div class="play-button"></div>
@@ -284,6 +288,10 @@
             <iframe width="1280" height="720" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
+
+    <!-- BACK TO TOP -->
+    <button type="button" class="btn" onclick="topFunction()" id="topBtn" title="Go to top"><img
+            src="/IMAGES/icons/arrow-down.svg" alt=""></button>
 
     <!-- FOOTER -->
     <footer class="d-flex justify-content-around align-items-center py-5">
