@@ -30,7 +30,7 @@ const closeButton = document.querySelector('.close-button');
 videos.forEach(video => {
     const id = video.getAttribute('data-id');
     const thumbnail = video.querySelector('img');
-    const playButton = video.querySelector('.play-button');
+    // const playButton = video.querySelector('.play-button');
 
     video.addEventListener('click', () => {
         lightbox.style.display = 'flex';
@@ -47,20 +47,20 @@ videos.forEach(video => {
         lightboxVideo.setAttribute('src', '');
     });
 
-    // Show play button on hover
-    video.addEventListener('mouseenter', () => {
-        playButton.style.display = 'block';
-    });
+    // // Show play button on hover
+    // video.addEventListener('mouseenter', () => {
+    //     playButton.style.display = 'block';
+    // });
 
-    video.addEventListener('mouseleave', () => {
-        playButton.style.display = 'none';
-    });
+    // video.addEventListener('mouseleave', () => {
+    //     playButton.style.display = 'none';
+    // });
 
-    // Hide play button on click and show video
-    playButton.addEventListener('click', event => {
-        event.stopPropagation();
-        video.click();
-    });
+    // // Hide play button on click and show video
+    // playButton.addEventListener('click', event => {
+    //     event.stopPropagation();
+    //     video.click();
+    // });
 });
 
 // BACK TO TOP
