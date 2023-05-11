@@ -30,53 +30,6 @@ h1 {
     color: #ef8200;
 }
 
-/*////////////////////////////////////////////////////// SHOWCASE GALLERY */
-.showcaseGallery {
-    margin: 100px 0px;
-    display: flex;
-}
-
-.galleryContainer {
-    height: 20em;
-    width: 60em;
-    display: flex;
-    margin: auto;
-    gap: 4px;
-    transition: all 2s linear;
-}
-
-.galleryContainer>div {
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    background-position: center;
-    flex: 1;
-    transition: all 1s ease;
-}
-
-.galleryContainer>div:hover {
-    flex: 4
-}
-
-.bg-1 {
-    background-image: url(/IMAGES/films/posters/BetaTest_Website_Poster.jpg);
-}
-
-.bg-2 {
-    background-image: url(/IMAGES/films/posters/IMMORTAL_Website_Poster.jpg);
-}
-
-.bg-3 {
-    background-image: url(/IMAGES/films/posters/SleepStudy_Website_Poster.jpg);
-}
-
-.bg-4 {
-    background-image: url(/IMAGES/films/posters/HAYSEED_WEBSITE_POSTER.jpg);
-}
-
-.bg-5 {
-    background-image: url(/IMAGES/films/posters/SleepStudy_Website_Poster.jpg);
-}
-
 /*////////////////////////////////////////////////////// COLOR PAGE */
 #filmDetails {
     width: 25rem;
@@ -132,10 +85,10 @@ h1 {
 
 .stillsClose {
     position: absolute;
-    top: 150px;
-    right: 300px;
+    top: 10px;
+    right: 50px;
     color: #fff;
-    font-size: 30px;
+    font-size: 50px;
     font-weight: bold;
     cursor: pointer;
 }
@@ -156,19 +109,22 @@ h1 {
     width: 100%;
 }
 
-.video img:hover {
+/* .video img:hover {
     scale: 1.05;
+    cursor: pointer;
+} */
+
+.video:hover img {
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+    transform: rotate(90deg);
+    scale: 40%;
+    cursor: pointer;
 }
 
-.play-button {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80px;
-    height: 80px;
-    background: url('/IMAGES/icons/player-play-filled.svg') no-repeat center center;
-    cursor: pointer;
+.video img {
+    width: 100%;
+    height: auto;
+    transition: all 1s ease-in, all 0.5s ease-out;
 }
 
 .lightbox {
@@ -186,21 +142,22 @@ h1 {
 
 .lightbox .close-button {
     position: absolute;
-    top: 150px;
-    right: 300px;
-    font-size: 48px;
-    color: #fff;
+    top: 10px;
+    right: 50px;
+    font-size: 50px;
+    font-weight: bold;
+    color: whitesmoke;
     background-color: transparent;
     border: none;
-    outline: none;
     cursor: pointer;
 }
 
 .lightbox-video {
     position: relative;
-    width: 1280px;
-    height: 720px;
-    margin: auto;
+    padding-bottom: 56.25%;
+    height: 0;
+    width: 100%;
+    /* max-width: 1280px; */
 }
 
 .lightbox-video iframe {
@@ -209,6 +166,7 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
+    /* max-height: 720px; */
 }
 
 /*////////////////////////////////////////////////////// CONTACT FORM */
@@ -223,6 +181,28 @@ h1 {
 #contactText {
     color: whitesmoke;
     border: 1px solid #ef8200;
+}
+
+/*////////////////////////////////////////////////////// SHAPE DIVIDER */
+.custom-shape-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 101px;
+}
+
+.custom-shape-divider .shape-fill {
+    fill: #EF8200;
 }
 
 /*////////////////////////////////////////////////////// BACK TO TOP */
@@ -241,7 +221,7 @@ h1 {
 
 /*////////////////////////////////////////////////////// FOOTER */
 .socialIcon {
-    stroke: #fff;
+    stroke: whitesmoke;
 }
 
 .socialIcon:hover {
@@ -261,4 +241,5 @@ h1 {
     #filmThumbnail {
         width: 200px;
     }
+
 }
