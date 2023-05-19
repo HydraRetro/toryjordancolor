@@ -31,12 +31,12 @@ h1 {
 }
 
 /*////////////////////////////////////////////////////// COLOR PAGE */
-#filmDetails {
+.filmDetails {
     width: 25rem;
     color: whitesmoke;
 }
 
-#watchButtons {
+.watchButtons {
     color: whitesmoke;
     border: 1px solid #ef8200;
     padding: 0.5rem 1rem;
@@ -44,14 +44,14 @@ h1 {
     transition: scale 0.2 ease;
 }
 
-#watchButtons:hover {
+.watchButtons:hover {
     scale: 1.05;
     color: whitesmoke;
     background-color: #ef8200;
 }
 
-#headerHover:hover {
-    scale: 1.005;
+.headerHover:hover {
+    scale: 1.01;
 }
 
 /*/////////////////////////////////////////////////// FILM STILLS */
@@ -236,10 +236,6 @@ h1 {
     .filmDetails {
         display: block;
         text-align: center;
-    }
-
-    #filmThumbnail {
-        width: 200px;
     }
 
 }
