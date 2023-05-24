@@ -183,26 +183,9 @@ h1 {
     border: 1px solid #ef8200;
 }
 
-/*////////////////////////////////////////////////////// SHAPE DIVIDER */
-.custom-shape-divider {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-}
-
-.custom-shape-divider svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 101px;
-}
-
-.custom-shape-divider .shape-fill {
-    fill: #EF8200;
+/* HEADSHOT */
+#headshotPhoto {
+    max-width: 450px;
 }
 
 /*////////////////////////////////////////////////////// BACK TO TOP */
@@ -236,6 +219,10 @@ h1 {
     .filmDetails {
         display: block;
         text-align: center;
+    }
+
+    #headshotPhoto {
+        max-width: 250px;
     }
 
 }
