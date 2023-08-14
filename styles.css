@@ -31,6 +31,10 @@ h1 {
 }
 
 /*////////////////////////////////////////////////////// COLOR PAGE */
+.galleryFlex {
+    display: flex;
+}
+
 .filmDetails {
     width: 25rem;
     color: whitesmoke;
@@ -216,6 +220,10 @@ h1 {
 
     #headshotPhoto {
         max-width: 250px;
+    }
+
+    .galleryFlex {
+        display: block;
     }
 
 }
