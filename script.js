@@ -1,3 +1,27 @@
+// FEATURE GALLERY - FLEX ON CLICK
+const galleryElements = document.querySelectorAll('.galleryFlex');
+const mediaQuery = window.matchMedia('(max-width: 576px)');
+
+const toggleDisplay = (element) => {
+    if (element.style.display === 'block') {
+        element.style.display = 'flex';
+    } else {
+        element.style.display = 'block';
+    }
+};
+
+const clickHandler = (element) => {
+    return () => {
+        if (!mediaQuery.matches) {
+            toggleDisplay(element);
+        }
+    };
+};
+
+galleryElements.forEach(element => {
+    element.addEventListener('click', clickHandler(element));
+});
+
 // FILM STILLS
 const galleryImgs = document.querySelectorAll('.stillsGallery-img');
 const stillsLightbox = document.querySelector('.stillsLightbox');
@@ -62,9 +86,6 @@ const topFunction = () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 };
-
-
-
 
 
 
