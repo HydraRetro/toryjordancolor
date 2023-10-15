@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -10,12 +11,12 @@ body {
     padding: 0;
     font-family: 'Nunito Sans', sans-serif;
     color: whitesmoke;
-    background-color: rgb(13, 13, 13);
+    background-color: rgb(10, 10, 10);
 }
 
 /*////////////////////////////////////////////////////// NAVBAR */
 #navbarLogo {
-    color: #ef8200;
+    color: #0081a7;
 }
 
 #navbarLogo:hover {
@@ -27,17 +28,26 @@ body {
 }
 
 #navbarText:hover {
-    color: #ef8200;
+    color: #0081a7;
 }
 
 /* MASTER */
 h1 {
     font-size: 5rem;
-    color: #ef8200;
+    color: #0081a7;
 }
 
 .pageName {
     padding: 100px 0px;
+}
+
+/* //////////////////////////////////////////////////////REEL PAGE */
+.reelContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* border: 1px solid rgb(17, 0, 255); */
 }
 
 /*////////////////////////////////////////////////////// COLOR PAGE */
@@ -46,22 +56,22 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-flow: row wrap;
+    flex-flow: wrap;
 
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .accordionItem {
-    flex: 0 1 30%;
+    flex: 0 1 50%;
 
-    border: 1px solid rgb(17, 0, 255);
+    /* border: 1px solid rgb(17, 0, 255); */
 }
 
 .accordionItemHeading {
     cursor: pointer;
     width: 100%;
 
-    border: 1px solid rgb(0, 255, 42);
+    /* border: 1px solid rgb(0, 255, 42); */
 }
 
 .close .accordionItemContent {
@@ -74,12 +84,6 @@ h1 {
 }
 
 .open .accordionItemContent {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    /* gap: 150px; */
-    /* width: 100%; */
-
     -webkit-transform: scaleY(1);
     -o-transform: scaleY(1);
     -ms-transform: scaleY(1);
@@ -95,7 +99,7 @@ h1 {
     transition: transform 0.4s ease;
 }
 
-/* GRID */
+/* /////////////////////////////////////////////////////////GRID */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -137,17 +141,12 @@ h1 {
     clear: both;
 }
 
-/* Create four equal columns that floats next to eachother */
 .column {
     float: left;
     width: 25%;
 }
 
-
-
-
-
-
+/* //////////////////////////////////////////////////////FILM DETAILS */
 .filmDetails {
     width: 25rem;
     color: whitesmoke;
@@ -155,7 +154,7 @@ h1 {
 
 .watchButtons {
     color: whitesmoke;
-    border: 1px solid #ef8200;
+    border: 1px solid #0081a7;
     padding: 0.5rem 1rem;
     font-weight: bolder;
     transition: scale 0.2 ease;
@@ -165,7 +164,7 @@ h1 {
 .watchButtons:hover {
     scale: 1.05;
     color: whitesmoke;
-    background-color: #ef8200;
+    background-color: #0081a7;
 }
 
 .headerHover:hover {
@@ -207,7 +206,7 @@ h1 {
     position: absolute;
     top: 10px;
     right: 50px;
-    color: #fff;
+    color: whitesmoke;
     font-size: 50px;
     font-weight: bold;
     cursor: pointer;
@@ -215,6 +214,8 @@ h1 {
 
 /*////////////////////////////////////////////////////// VIDEO GALLERY */
 .videoGallery {
+    display: flex;
+    justify-content: space-between;
     margin: 20px auto;
     gap: 30px;
 }
@@ -282,23 +283,32 @@ h1 {
     height: 100%;
 }
 
-/*////////////////////////////////////////////////////// CONTACT FORM */
-#contactForm {
-    max-width: 700px;
+/* SHAPE DIVIDER */
+.shapeDivider {
+    padding: 50px 0px;
+    text-align: center;
 }
 
-#contactText::placeholder {
-    color: whitesmoke;
+/*////////////////////////////////////////////////////// CONTACT */
+.contactBio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    /* border: 1px solid rgb(0, 38, 255); */
 }
 
-#contactText {
-    color: whitesmoke;
-    border: 1px solid #ef8200;
+.contactDetails {
+    margin: 10px 50px;
+    padding: 10px 30px;
+
+    /* border: 1px solid red; */
 }
 
-/* HEADSHOT */
 #headshotPhoto {
-    max-width: 450px;
+    max-width: 100%;
+    height: auto;
 }
 
 /*////////////////////////////////////////////////////// BACK TO TOP */
@@ -321,7 +331,7 @@ h1 {
 }
 
 .socialIcon:hover {
-    stroke: #ef8200;
+    stroke: #0081a7;
     transform: rotate(3.142rad);
     transition: 300ms;
 }
@@ -329,12 +339,21 @@ h1 {
 /*////////////////////////////////////////////////////// RESPONSIVE DESIGN */
 @media screen and (max-width: 1000px) {
 
+    .pageName {
+        text-align: center;
+        padding: 25px 0px;
+    }
+
     .grid-container {
         display: block;
     }
 
     .gridItem1 {
         text-align: center;
+    }
+
+    .contactBio {
+        flex-direction: column;
     }
 
     #headshotPhoto {
