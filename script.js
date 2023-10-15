@@ -1,25 +1,46 @@
 // FEATURE GALLERY - FLEX ON CLICK
-const galleryElements = document.querySelectorAll('.galleryFlex');
-const mediaQuery = window.matchMedia('(max-width: 576px)');
 
-const toggleDisplay = (element) => {
-    if (element.style.display === 'block') {
-        element.style.display = 'flex';
-    } else {
-        element.style.display = 'block';
-    }
-};
+const accItems = document.querySelectorAll('.accordionItem');
+const accHDs = document.querySelectorAll('.accordionItemHeading');
+const accordionWrapper = document.querySelector('.accordionWrapper');
 
-const clickHandler = (element) => {
-    return () => {
-        if (!mediaQuery.matches) {
-            toggleDisplay(element);
+accHDs.forEach((accHD) => {
+    accHD.addEventListener('click', toggleItem);
+});
+
+function toggleItem() {
+    const itemClass = this.parentNode.classList;
+    const currentDisplay = accordionWrapper.style.display;
+
+    for (let i = 0; i < accItems.length; i++) {
+        if (accItems[i] !== this.parentNode) {
+            accItems[i].classList.remove('open');
+            accItems[i].classList.add('close');
         }
-    };
-};
+    }
 
-galleryElements.forEach(element => {
-    element.addEventListener('click', clickHandler(element));
+    if (itemClass.contains('open')) {
+        itemClass.remove('open');
+        itemClass.add('close');
+        accordionWrapper.style.display = currentDisplay === 'block' ? 'flex' : 'block';
+    } else {
+        itemClass.remove('close');
+        itemClass.add('open');
+        accordionWrapper.style.display = 'block';
+    }
+}
+
+
+// Scroll when image clicked
+const images = document.querySelectorAll('.scrollImage');
+
+images.forEach(image => {
+    image.addEventListener('click', () => {
+        image.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
 });
 
 // FILM STILLS
