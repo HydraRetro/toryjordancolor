@@ -1,7 +1,13 @@
-body {
-    margin: 0;
-    padding: 0;
+* {
     box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: auto 10%;
+    padding: 0;
     font-family: 'Nunito Sans', sans-serif;
     color: whitesmoke;
     background-color: rgb(13, 13, 13);
@@ -30,10 +36,117 @@ h1 {
     color: #ef8200;
 }
 
-/*////////////////////////////////////////////////////// COLOR PAGE */
-.galleryFlex {
-    display: flex;
+.pageName {
+    padding: 100px 0px;
 }
+
+/*////////////////////////////////////////////////////// COLOR PAGE */
+
+.accordionWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+
+    border: 1px solid red;
+}
+
+.accordionItem {
+    flex: 0 1 30%;
+
+    border: 1px solid rgb(17, 0, 255);
+}
+
+.accordionItemHeading {
+    cursor: pointer;
+    width: 100%;
+
+    border: 1px solid rgb(0, 255, 42);
+}
+
+.close .accordionItemContent {
+    height: 0px;
+    transition: height 1s ease-out;
+    -webkit-transform: scaleY(0);
+    -o-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+}
+
+.open .accordionItemContent {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* gap: 150px; */
+    /* width: 100%; */
+
+    -webkit-transform: scaleY(1);
+    -o-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: top;
+    -o-transform-origin: top;
+    -ms-transform-origin: top;
+    transform-origin: top;
+
+    -webkit-transition: -webkit-transform 0.4s ease-out;
+    -o-transition: -o-transform 0.4s ease;
+    -ms-transition: -ms-transform 0.4s ease;
+    transition: transform 0.4s ease;
+}
+
+/* GRID */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.item1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    grid-column: 1 / 1;
+    grid-row: 1;
+}
+
+.gridItem1 {
+    align-self: center;
+}
+
+.item2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    grid-column: 2 / 2;
+    grid-row: 1;
+}
+
+.item3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1 / span 2;
+    grid-row: 2;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Create four equal columns that floats next to eachother */
+.column {
+    float: left;
+    width: 25%;
+}
+
+
+
+
+
 
 .filmDetails {
     width: 25rem;
@@ -46,6 +159,7 @@ h1 {
     padding: 0.5rem 1rem;
     font-weight: bolder;
     transition: scale 0.2 ease;
+    background: none;
 }
 
 .watchButtons:hover {
@@ -61,10 +175,12 @@ h1 {
 /*/////////////////////////////////////////////////// FILM STILLS */
 .stillsGallery-img {
     cursor: pointer;
+    max-width: 100%;
+    height: auto;
 }
 
 .stillsGallery-img:hover {
-    scale: 1.05;
+    scale: 1.025;
 }
 
 .stillsLightbox {
@@ -211,19 +327,18 @@ h1 {
 }
 
 /*////////////////////////////////////////////////////// RESPONSIVE DESIGN */
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 1000px) {
 
-    .filmDetails {
+    .grid-container {
         display: block;
+    }
+
+    .gridItem1 {
         text-align: center;
     }
 
     #headshotPhoto {
         max-width: 250px;
-    }
-
-    .galleryFlex {
-        display: block;
     }
 
     footer {
