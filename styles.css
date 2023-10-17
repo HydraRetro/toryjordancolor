@@ -97,7 +97,7 @@ a.site-logo {
     transform: translateY(-3px) rotate(-45deg);
 }
 
-/* MASTER */
+/* ////////////////////////////////////////////////////////MASTER */
 h1 {
     font-size: 5rem;
     color: #0081a7;
@@ -118,26 +118,30 @@ h1 {
 
 /*////////////////////////////////////////////////////// COLOR PAGE */
 
-.accordionWrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-flow: wrap;
-
-    /* border: 1px solid red; */
-}
-
-.accordionItem {
-    flex: 0 1 50%;
+/* ///////////////////////////////////////////////////////IMAGE GRID */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    max-width: 100%;
+    margin: 0 auto;
 
     /* border: 1px solid rgb(17, 0, 255); */
 }
 
-.accordionItemHeading {
-    cursor: pointer;
-    width: 100%;
+.imageHeader {
+    position: relative;
+    overflow: hidden;
+}
 
-    /* border: 1px solid rgb(0, 255, 42); */
+.imageHeader img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.accordionItem {
+    cursor: pointer;
 }
 
 .close .accordionItemContent {
@@ -165,7 +169,7 @@ h1 {
     transition: transform 0.4s ease;
 }
 
-/* /////////////////////////////////////////////////////////GRID */
+/* /////////////////////////////////////////////////////////FILM DETAILS - GRID */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -192,6 +196,10 @@ h1 {
     padding: 30px;
     grid-column: 2 / 2;
     grid-row: 1;
+}
+
+.item2 img {
+    max-width: 300px;
 }
 
 .item3 {
@@ -284,18 +292,20 @@ h1 {
 .videoGallery {
     display: flex;
     justify-content: space-between;
-    margin: 20px auto;
-    gap: 30px;
+    gap: 15px;
+
+    /* border: 1px solid red; */
 }
 
 .video {
     position: relative;
     width: 48%;
-    margin-bottom: 20px;
+
+    /* border: 1px solid rgb(0, 204, 255); */
 }
 
 .video img {
-    width: 100%;
+    /* width: 100%; */
 }
 
 .video:hover img {
@@ -336,19 +346,21 @@ h1 {
     cursor: pointer;
 }
 
+/* FIX RESPONSIVE */
 .lightbox-video {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    width: 100%;
-}
-
-.lightbox-video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
+
+    /* border: 1px solid rgb(38, 0, 255); */
+}
+
+/* FIX RESPONSIVE */
+iframe {
+
+    /* border: 1px solid red; */
 }
 
 /* SHAPE DIVIDER */
@@ -362,7 +374,6 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 
     /* border: 1px solid rgb(0, 38, 255); */
 }
@@ -398,7 +409,9 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 20px 0px;
+    margin: 50px 0px;
+
+    /* border: 1px solid red; */
 }
 
 .socialIcon {
@@ -413,8 +426,8 @@ footer {
 
 /*////////////////////////////////////////////////////// RESPONSIVE DESIGN */
 @media screen and (max-width: 992px) {
-    .accordionWrapper {
-        display: flex;
+    .image-grid {
+        display: block;
         justify-content: center;
     }
 
