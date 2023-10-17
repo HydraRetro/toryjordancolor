@@ -31,7 +31,7 @@ function navLinkClick() {
 // FEATURE GALLERY - FLEX ON CLICK
 const accItems = document.querySelectorAll('.accordionItem');
 const accHDs = document.querySelectorAll('.accordionItemHeading');
-const accordionWrapper = document.querySelector('.accordionWrapper');
+const accordionWrapper = document.querySelector('.image-grid');
 
 accHDs.forEach((accHD) => {
     accHD.addEventListener('click', toggleItem);
@@ -39,24 +39,20 @@ accHDs.forEach((accHD) => {
 
 function toggleItem() {
     const itemClass = this.parentNode.classList;
-    const currentDisplay = accordionWrapper.style.display;
+    const isItemOpen = itemClass.contains('open');
 
-    for (let i = 0; i < accItems.length; i++) {
-        if (accItems[i] !== this.parentNode) {
-            accItems[i].classList.remove('open');
-            accItems[i].classList.add('close');
+    accItems.forEach(item => {
+        if (item !== this.parentNode) {
+            item.classList.remove('open');
+            item.classList.add('close');
         }
-    }
+    });
 
-    if (itemClass.contains('open')) {
-        itemClass.remove('open');
-        itemClass.add('close');
-        accordionWrapper.style.display = currentDisplay === 'block' ? 'flex' : 'block';
-    } else {
-        itemClass.remove('close');
-        itemClass.add('open');
-        accordionWrapper.style.display = 'block';
-    }
+    itemClass.remove(isItemOpen ? 'open' : 'close');
+    itemClass.add(isItemOpen ? 'close' : 'open');
+
+    accordionWrapper.style.display = isItemOpen ? 'grid' : 'block';
+    accordionWrapper.style.maxWidth = isItemOpen ? '100%' : '80%';
 }
 
 
