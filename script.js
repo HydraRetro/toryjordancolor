@@ -52,7 +52,7 @@ function toggleItem() {
     itemClass.add(isItemOpen ? 'close' : 'open');
 
     accordionWrapper.style.display = isItemOpen ? 'grid' : 'block';
-    accordionWrapper.style.maxWidth = isItemOpen ? '100%' : '80%';
+    accordionWrapper.style.maxWidth = isItemOpen ? '100%' : '90%';
 }
 
 
