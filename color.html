@@ -361,20 +361,20 @@
                         <div class="item3">
                             <div class="row">
                                 <div class="column">
-                                    <img src="IMAGES/films/gallery/IMMORTAL/IMMORTAL_GALLERY_01.jpg" alt="IMMORTAL still"
-                                        class="stillsGallery-img">
+                                    <img src="IMAGES/films/gallery/IMMORTAL/IMMORTAL_GALLERY_01.jpg"
+                                        alt="IMMORTAL still" class="stillsGallery-img">
                                 </div>
                                 <div class="column">
-                                    <img src="IMAGES/films/gallery/IMMORTAL/IMMORTAL_GALLERY_02.jpg" alt="IMMORTAL still"
-                                        class="stillsGallery-img">
+                                    <img src="IMAGES/films/gallery/IMMORTAL/IMMORTAL_GALLERY_02.jpg"
+                                        alt="IMMORTAL still" class="stillsGallery-img">
                                 </div>
                                 <div class="column">
-                                    <img src="IMAGES/films/gallery/IMMORTAL/IMMORTAL_GALLERY_03.jpg" alt="IMMORTAL still"
-                                        class="stillsGallery-img">
+                                    <img src="IMAGES/films/gallery/IMMORTAL/IMMORTAL_GALLERY_03.jpg"
+                                        alt="IMMORTAL still" class="stillsGallery-img">
                                 </div>
                                 <div class="column">
-                                    <img src="IMAGES/films/gallery/IMMORTAL/IMMORTAL_GALLERY_04.jpg" alt="IMMORTAL still"
-                                        class="stillsGallery-img">
+                                    <img src="IMAGES/films/gallery/IMMORTAL/IMMORTAL_GALLERY_04.jpg"
+                                        alt="IMMORTAL still" class="stillsGallery-img">
                                 </div>
                             </div>
                         </div>
@@ -398,49 +398,70 @@
 
     <!-- VIDEO GALLERY -->
     <div class="videoGallery">
-        <div class="video" data-id="dgQp9HmNQZI">
+        <div class="videoImageThumbnail" onclick="openLightbox('dgQp9HmNQZI')">
             <img src="IMAGES/films/thumbnails/GG_Choc_Thumbnail.jpg" alt="Grey Goose Chocolate Martini YouTube video">
-            <h5>Chocolate Martini Cocktail | Grey Goose Vodka</h5>
+            <div class="thumbnailOverlay">
+                <div class="thumbnailOverlay-text">Chocolate Martini Cocktail | Grey Goose Vodka</div>
+            </div>
         </div>
-        <div class="video" data-id="bnHsnIZktIc">
-            <img src="IMAGES/films/thumbnails/WAVE_Thumbnail.jpg" alt="WAVE by SUN (Brutal Pop) YouTube Music Video">
-            <h5>WAVE by SUN (Brutal Pop) Music Video</h5>
+        <div class="videoImageThumbnail" onclick="openLightbox('bnHsnIZktIc')">
+            <img src="IMAGES/films/thumbnails/WAVE_Thumbnail.jpg" alt="WAVE by SUN (Brutal Pop) Music Video">
+            <div class="thumbnailOverlay">
+                <div class="thumbnailOverlay-text">WAVE by SUN (Brutal Pop) | Music Video</div>
+            </div>
         </div>
-        <div class="video" data-id="U4m7wT_77XI">
+        <div class="videoImageThumbnail" onclick="openLightbox('U4m7wT_77XI')">
             <img src="IMAGES/films/thumbnails/Jets_Thumbnail.jpg"
                 alt="Bombardier Global 6000 Private Jet Travel NetJets YouTube Video">
-            <h5>Bombardier Global 6000 | Private Jet Travel | NetJets</h5>
+            <div class="thumbnailOverlay">
+                <div class="thumbnailOverlay-text">Bombardier Global 6000 | Private Jet Travel | NetJets</div>
+            </div>
         </div>
-        <div class="video" data-id="lrcjj9JFlMI">
+        <div class="videoImageThumbnail" onclick="openLightbox('lrcjj9JFlMI')">
             <img src="IMAGES/films/thumbnails/EastonBats_Thumbnail.jpg" alt="Easton Bats YouTube Video">
-            <h5>Easton Bats | Experience ADVanced Power</h5>
+            <div class="thumbnailOverlay">
+                <div class="thumbnailOverlay-text">Easton Bats | Experience ADVanced Power</div>
+            </div>
         </div>
-        <div class="video" data-id="_BsDT3CLw5A">
+        <div class="videoImageThumbnail" onclick="openLightbox('_BsDT3CLw5A')">
             <img src="IMAGES/films/thumbnails/BeaAtRehab_Thumbnail.jpg" alt="Bea at Rehab Short Film">
-            <h5>Bea at Rehab</h5>
+            <div class="thumbnailOverlay">
+                <div class="thumbnailOverlay-text">Bea at Rehab | Short Film</div>
+            </div>
         </div>
-        <div class="video" data-id="fTO6bhg2WIc">
+        <div class="videoImageThumbnail" onclick="openLightbox('fTO6bhg2WIc')">
             <img src="IMAGES/films/thumbnails/TAKINGSTOCK_Thumbnail.jpg"
                 alt="UNLISTED Taking Stock Mailchimp Presents YouTube Video">
-            <h5>Taking Stock | Original Series</h5>
+            <div class="thumbnailOverlay">
+                <div class="thumbnailOverlay-text">Taking Stock | Original Series</div>
+            </div>
         </div>
-        <div class="video" data-id="jG50ne6cd10">
+        <div class="videoImageThumbnail" onclick="openLightbox('jG50ne6cd10')">
             <img src="IMAGES/films/thumbnails/VTECH_Thumbnail.jpg"
                 alt="KidiZoom PrintCam | Digital Video :30 sec | VTech">
-            <h5>KidiZoom PrintCam | VTech</h5>
+            <div class="thumbnailOverlay">
+                <div class="thumbnailOverlay-text">KidiZoom PrintCam | VTech</div>
+            </div>
         </div>
-        <div class="video" data-id="cgHk5wRvC-w">
+        <div class="videoImageThumbnail" onclick="openLightbox('cgHk5wRvC-w')">
             <img src="IMAGES/films/thumbnails/HUMAN_Thumbnail.jpg" alt="HUMAN music video">
-            <h5>HUMAN</h5>
+            <div class="thumbnailOverlay">
+                <div class="thumbnailOverlay-text">HUMAN | Music Video</div>
+            </div>
+        </div>
+
+        <div id="videoLightbox" class="videoLightbox">
+            <div class="videoLightboxContent">
+                <span class="videoCloseButton" onclick="closeLightbox()">&times;</span>
+                <div class="videoGalleryContainer">
+                    <iframe id="videoFrame" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="lightbox">
-        <button class="close-button">&times;</button>
-        <div class="lightbox-video">
-            <iframe width="1280" height="720" frameborder="0" allowfullscreen></iframe>
-        </div>
-    </div>
+
+
 
     <!-- BACK TO TOP -->
     <button type="button" onclick="topFunction()" id="topBtn" title="Go to top"><img src="IMAGES/icons/arrow-down.svg"

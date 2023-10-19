@@ -4,24 +4,17 @@ const navToggler = document.querySelector('.nav-toggler');
 const navMenu = document.querySelector('.site-navbar ul');
 const navLinks = document.querySelectorAll('.site-navbar a');
 
-// load all event listners
 allEventListners();
 
-// functions of all event listners
 function allEventListners() {
-    // toggler icon click event
     navToggler.addEventListener('click', togglerClick);
-    // nav links click event
     navLinks.forEach(elem => elem.addEventListener('click', navLinkClick));
 }
 
-// togglerClick function
 function togglerClick() {
     navToggler.classList.toggle('toggler-open');
     navMenu.classList.toggle('open');
 }
-
-// navLinkClick function
 function navLinkClick() {
     if (navMenu.classList.contains('open')) {
         navToggler.click();
@@ -92,29 +85,25 @@ stillsLightbox.addEventListener('click', (event) => {
 });
 
 // VIDEO GALLERY
-const videos = document.querySelectorAll('.video');
-const lightbox = document.querySelector('.lightbox');
-const lightboxVideo = document.querySelector('.lightbox-video iframe');
-const closeButton = document.querySelector('.close-button');
+function openLightbox(videoId) {
+    const videoLightbox = document.getElementById('videoLightbox');
+    const videoFrame = document.getElementById('videoFrame');
+    videoFrame.src = `https://www.youtube.com/embed/${videoId}`;
+    videoLightbox.style.display = 'flex';
+}
 
-videos.forEach(video => {
-    const id = video.getAttribute('data-id');
-    const thumbnail = video.querySelector('img');
+function closeLightbox() {
+    const videoLightbox = document.getElementById('videoLightbox');
+    const videoFrame = document.getElementById('videoFrame');
+    videoFrame.src = '';
+    videoLightbox.style.display = 'none';
+}
 
-    video.addEventListener('click', () => {
-        lightbox.style.display = 'flex';
-        lightboxVideo.setAttribute('src', `https://www.youtube.com/embed/${id}?autoplay=0`);
-    });
-
-    closeButton.addEventListener('click', () => {
-        lightbox.style.display = 'none';
-        lightboxVideo.setAttribute('src', '');
-    });
-
-    lightbox.addEventListener('click', () => {
-        lightbox.style.display = 'none';
-        lightboxVideo.setAttribute('src', '');
-    });
+window.addEventListener('click', (event) => {
+    const videoLightbox = document.getElementById('videoLightbox');
+    if (event.target === videoLightbox) {
+        closeLightbox();
+    }
 });
 
 // BACK TO TOP
