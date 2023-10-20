@@ -81,7 +81,7 @@
 
                         <!-- FILM STILLS -->
                         <div class="item3">
-                            <div class="row">
+                            <!-- <div class="row">
                                 <div class="column">
                                     <img src="IMAGES/films/gallery/RollingAway/RollingAway_GALLERY_01.jpg"
                                         alt="Rolling Away still" class="stillsGallery-img">
@@ -98,7 +98,85 @@
                                     <img src="IMAGES/films/gallery/RollingAway/RollingAway_GALLERY_04.jpg"
                                         alt="Rolling Away still" class="stillsGallery-img">
                                 </div>
+                            </div> -->
+
+                            <div class="row">
+                                <div class="columnFilmStills">
+                                    <img src="IMAGES/films/gallery/RollingAway/RollingAway_GALLERY_01.jpg"
+                                        style="width:100%" onclick="openModal();currentSlide(1)"
+                                        class="hover-shadow cursorFilmStills">
+                                </div>
+                                <div class="columnFilmStills">
+                                    <img src="IMAGES/films/gallery/RollingAway/RollingAway_GALLERY_02.jpg"
+                                        style="width:100%" onclick="openModal();currentSlide(2)"
+                                        class="hover-shadow cursorFilmStills">
+                                </div>
+                                <div class="columnFilmStills">
+                                    <img src="IMAGES/films/gallery/RollingAway/RollingAway_GALLERY_03.jpg"
+                                        style="width:100%" onclick="openModal();currentSlide(3)"
+                                        class="hover-shadow cursorFilmStills">
+                                </div>
+                                <div class="columnFilmStills">
+                                    <img src="IMAGES/films/gallery/RollingAway/RollingAway_GALLERY_04.jpg"
+                                        style="width:100%" onclick="openModal();currentSlide(4)"
+                                        class="hover-shadow cursorFilmStills">
+                                </div>
                             </div>
+
+                            <div id="myModalFilmStills" class="modalFilmStills">
+                                <span class="closeFilmStills cursor" onclick="closeModal()">&times;</span>
+                                <div class="modal-contentFilmStills">
+
+                                    <div class="mySlidesFilmStills">
+                                        <div class="numbertextFilmStills">1 / 4</div>
+                                        <img src="IMAGES/films/gallery/RollingAway/RollingAway_GALLERY_01.jpg"
+                                            style="width:100%">
+                                    </div>
+
+                                    <div class="mySlidesFilmStills">
+                                        <div class="numbertextFilmStills">2 / 4</div>
+                                        <img src="IMAGES/films/gallery/RollingAway/RollingAway_GALLERY_02.jpg"
+                                            style="width:100%">
+                                    </div>
+
+                                    <div class="mySlidesFilmStills">
+                                        <div class="numbertextFilmStills">3 / 4</div>
+                                        <img src="IMAGES/films/gallery/RollingAway/RollingAway_GALLERY_03.jpg"
+                                            style="width:100%">
+                                    </div>
+
+                                    <div class="mySlidesFilmStills">
+                                        <div class="numbertextFilmStills">4 / 4</div>
+                                        <img src="IMAGES/films/gallery/RollingAway/RollingAway_GALLERY_04.jpg"
+                                            style="width:100%">
+                                    </div>
+
+                                    <a class="prevFilmStills" onclick="plusSlides(-1)">&#10094;</a>
+                                    <a class="nextFilmStills" onclick="plusSlides(1)">&#10095;</a>
+
+                                    <div class="columnFilmStills">
+                                        <img class="demoFilmStills cursor"
+                                            src="IMAGES/films/gallery/RollingAway/RollingAway_GALLERY_01.jpg"
+                                            style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+                                    </div>
+                                    <div class="columnFilmStills">
+                                        <img class="demoFilmStills cursor"
+                                            src="IMAGES/films/gallery/RollingAway/RollingAway_GALLERY_02.jpg"
+                                            style="width:100%" onclick="currentSlide(2)" alt="Snow">
+                                    </div>
+                                    <div class="columnFilmStills">
+                                        <img class="demoFilmStills cursor"
+                                            src="IMAGES/films/gallery/RollingAway/RollingAway_GALLERY_03.jpg"
+                                            style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+                                    </div>
+                                    <div class="columnFilmStills">
+                                        <img class="demoFilmStills cursor"
+                                            src="IMAGES/films/gallery/RollingAway/RollingAway_GALLERY_04.jpg"
+                                            style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -238,14 +316,16 @@
                                 </p>
                                 <h3>Directed By:</h3>
                                 <p>H.P. Mendoza</p>
-                                <a href="https://www.imdb.com/title/tt13407984" target="_blank"><button type="button"
-                                        class="watchButtons">COMING SOON</button></a>
+                                <a href="https://www.youtube.com/watch?v=TPYeBGmG3Dg" target="_blank"><button
+                                        type="button" class="watchButtons">TRAILER</button></a>
+                                <!-- <a href="https://www.imdb.com/title/tt13407984" target="_blank"><button type="button"
+                                        class="watchButtons">COMING SOON</button></a> -->
                             </div>
                         </div>
 
                         <!-- FILM POSTER -->
                         <div class="item2">
-                            <img src="IMAGES/films/posters/POSTER_PLACEHOLDER.jpg"
+                            <img src="IMAGES/films/posters/SAHF_Website_Poster.jpg"
                                 alt="The Secret Art Of Human Flight Poster">
                         </div>
 
@@ -385,10 +465,10 @@
         </div>
 
         <!-- STILLS LIGHTBOX -->
-        <div class="stillsLightbox">
+        <!-- <div class="stillsLightbox">
             <img src="" alt="" class="stillsLightbox-img">
             <span class="stillsClose">&times;</span>
-        </div>
+        </div> -->
     </div>
 
     <!-- SHAPE DIVIDER -->
@@ -429,11 +509,24 @@
                 <div class="thumbnailOverlay-text">Bea at Rehab | Short Film</div>
             </div>
         </div>
+        <div class="videoImageThumbnail" onclick="openLightbox('b3CV-nn7Wcc')">
+            <img src="IMAGES/films/thumbnails/TrashMaster_Thumbnail.jpg"
+                alt="Gorilla Wizard: Trash Master [Official Video] (Uncensored)">
+            <div class="thumbnailOverlay">
+                <div class="thumbnailOverlay-text">Gorilla Wizard: Trash Master</div>
+            </div>
+        </div>
         <div class="videoImageThumbnail" onclick="openLightbox('fTO6bhg2WIc')">
             <img src="IMAGES/films/thumbnails/TAKINGSTOCK_Thumbnail.jpg"
                 alt="UNLISTED Taking Stock Mailchimp Presents YouTube Video">
             <div class="thumbnailOverlay">
                 <div class="thumbnailOverlay-text">Taking Stock | Original Series</div>
+            </div>
+        </div>
+        <div class="videoImageThumbnail" onclick="openLightbox('C632POycbh8')">
+            <img src="IMAGES/films/thumbnails/PoolParty_Thumbnail.jpg" alt="Preethevibes - Pool Party Music Video">
+            <div class="thumbnailOverlay">
+                <div class="thumbnailOverlay-text">Preethevibes - Pool Party | Music Video</div>
             </div>
         </div>
         <div class="videoImageThumbnail" onclick="openLightbox('jG50ne6cd10')">
@@ -459,9 +552,6 @@
             </div>
         </div>
     </div>
-
-
-
 
     <!-- BACK TO TOP -->
     <button type="button" onclick="topFunction()" id="topBtn" title="Go to top"><img src="IMAGES/icons/arrow-down.svg"
