@@ -35,6 +35,10 @@ a.site-logo {
     text-decoration: none;
 }
 
+a.site-logo:hover {
+    color: whitesmoke;
+}
+
 .site-navbar ul {
     margin: 0;
     padding: 0;
@@ -98,6 +102,11 @@ a.site-logo {
 }
 
 /* ////////////////////////////////////////////////////////MASTER */
+.pageName {
+    line-height: 100%;
+    margin: 100px 0px;
+}
+
 h1 {
     font-size: 4rem;
     color: #007399;
@@ -251,7 +260,7 @@ h1 {
 }
 
 /*/////////////////////////////////////////////////// FILM STILLS */
-/* .stillsGallery-img {
+.stillsGallery-img {
     cursor: pointer;
     max-width: 100%;
     height: auto;
@@ -290,127 +299,6 @@ h1 {
     font-size: 50px;
     font-weight: bold;
     cursor: pointer;
-} */
-
-.rowFilmStills>.columnFilmStills {
-    padding: 0 8px;
-}
-
-.rowFilmStills:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.columnFilmStills {
-    float: left;
-    width: 25%;
-}
-
-/* The Modal (background) */
-.modalFilmStills {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    overflow: auto;
-}
-
-/* Modal Content */
-.modal-contentFilmStills {
-    position: absolute;
-    margin: auto;
-    padding: 0;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60%;
-    max-width: 100%;
-}
-
-/* The Close Button */
-.closeFilmStills {
-    color: white;
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    font-size: 35px;
-    font-weight: bold;
-}
-
-.closeFilmStills:hover,
-.closeFilmStills:focus {
-    color: #999;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.mySlidesFilmStills {
-    display: none;
-}
-
-.cursorFilmStills {
-    cursor: pointer;
-}
-
-/* Next & previous buttons */
-.prevFilmStills,
-.nextFilmStills {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
-}
-
-/* Position the "next button" to the right */
-.nextFilmStills {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prevFilmStills:hover,
-.nextFilmStills:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Number text (1/3 etc) */
-.numbertextFilmStills {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
-.demoFilmStills {
-    opacity: 0.6;
-}
-
-.activeFilmStills,
-.demoFilmStills:hover {
-    opacity: 1;
-}
-
-img.hover-shadow {
-    transition: 0.3s;
-}
-
-.hover-shadow:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /*////////////////////////////////////////////////////// VIDEO GALLERY */
