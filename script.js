@@ -16,10 +16,9 @@ navLinks.forEach(elem => {
     });
 });
 
-
 // FEATURE GALLERY - FLEX ON CLICK
 const accItems = document.querySelectorAll('.accordionItem');
-const accHDs = document.querySelectorAll('.accordionItemHeading');
+const accHDs = document.querySelectorAll('.videoImageThumbnail');
 const accordionWrapper = document.querySelector('.image-grid');
 
 accHDs.forEach((accHD) => {
