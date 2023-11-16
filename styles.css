@@ -133,8 +133,8 @@ h1 {
 /*////////////////////////////////////////////////////// COLOR PAGE */
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /* grid-gap: 10px; */
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-gap: 5px; */
     max-width: 100%;
     margin: 0 auto;
 }
@@ -322,7 +322,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     color: whitesmoke;
     opacity: 0;
     transition: opacity 0.3s;
