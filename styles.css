@@ -460,6 +460,14 @@ footer {
 
 /*////////////////////////////////////////////////////// RESPONSIVE DESIGN */
 @media screen and (max-width: 1000px) {
+    body {
+        margin: auto 5%;
+    }
+
+    .responsive-iframe {
+        height: 100%;
+    }
+    
     .image-grid {
         display: block;
         justify-content: center;
@@ -469,8 +477,17 @@ footer {
         text-align: center;
     }
 
+    .thumbnailOverlay-text-main {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
     .grid-container {
         display: block;
+    }
+
+    .item1 {
+        padding: 30px 0px;
     }
 
     .gridItem1 {
@@ -478,14 +495,11 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
     }
 
     .item2 {
         justify-content: center;
-    }
-
-    .modal-contentFilmStills {
-        width: 90%;
     }
 
     .videoImageThumbnail {
@@ -500,6 +514,10 @@ footer {
         margin-right: 0;
         margin-bottom: 20px;
         width: 100%;
+    }
+
+    .headshotPhoto {
+        width: 75%;
     }
 
     footer {
