@@ -297,7 +297,7 @@ h1 {
 .videoGallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px 10px;
+    /* gap: 5px 10px; */
 }
 
 .videoImageThumbnail {
@@ -489,7 +489,7 @@ footer {
     }
 
     .videoImageThumbnail {
-        flex: 1 0 33%;
+        flex: 1 0 50%;
     }
 
     .contactBio {
