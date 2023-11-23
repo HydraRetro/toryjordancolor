@@ -134,7 +134,7 @@ h1 {
 .image-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* grid-gap: 10px; */
+    grid-gap: 10px;
     max-width: 100%;
     margin: 0 auto;
 }
@@ -297,7 +297,7 @@ h1 {
 .videoGallery {
     display: flex;
     flex-wrap: wrap;
-    /* gap: 5px 10px; */
+    gap: 5px 10px;
 }
 
 .videoImageThumbnail {
