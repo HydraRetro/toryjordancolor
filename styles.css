@@ -127,7 +127,7 @@ h1 {
 .image-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
+    /* grid-gap: 10px; */
     max-width: 100%;
     margin: 0 auto;
 }
@@ -166,6 +166,43 @@ h1 {
     -o-transition: -o-transform 0.4s ease;
     -ms-transition: -ms-transform 0.4s ease;
     transition: transform 0.4s ease;
+}
+
+/* THUMBNAIL HOVER */
+.videoImageThumbnail {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.videoImageThumbnail img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.7s ease;
+}
+
+.videoImageThumbnail .hydraOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    color: whitesmoke;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    font-size: 1.5rem;
+}
+
+.videoImageThumbnail:hover .hydraOverlay {
+    opacity: 1;
+}
+
+.videoImageThumbnail:hover img {
+    transform: scale(1.05);
 }
 
 /* /////////////////////////////////////////////////////////FILM DETAILS - GRID */
@@ -216,7 +253,7 @@ h1 {
     width: 25%;
 }
 
-/* //////////////////////////////////////////////////////FILM DETAILS */
+/* FILM DETAILS */
 .imdbLogo {
     max-width: 50px;
     opacity: 90%;
@@ -268,7 +305,6 @@ h1 {
     /* Flex is the 5x2 grid */
     flex: 1 0 19%;
     position: relative;
-    /* margin: 10px; */
     cursor: pointer;
     transition: transform 0.7s;
     overflow: hidden;
@@ -287,7 +323,7 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7);
     opacity: 0;
     transition: opacity 0.7s ease;
     z-index: 1;
@@ -361,9 +397,7 @@ h1 {
     max-width: 90%;
     height: auto;
     display: block;
-    /* Ensures the image doesn't have any extra spacing */
     margin: 0 auto;
-    /* Centers the image */
 }
 
 #hydraCloseBtn {
@@ -372,7 +406,7 @@ h1 {
     right: 10px;
     font-size: 24px;
     color: whitesmoke;
-    background: rgba(0, 0, 0, 0.5);
+    background: #007399;
     border: none;
     cursor: pointer;
     padding: 5px 10px;
