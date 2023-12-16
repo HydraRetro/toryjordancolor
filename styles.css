@@ -114,20 +114,13 @@ h1 {
 
 /* //////////////////////////////////////////////////////REEL PAGE */
 .containerReel {
-    position: relative;
-    overflow: hidden;
-    padding-top: 56.25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.responsive-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 70%;
-    border: none;
+.containerReel>.hydraThumbnail {
+    flex: none;
 }
 
 /*////////////////////////////////////////////////////// COLOR PAGE */
@@ -148,11 +141,6 @@ h1 {
     width: 100%;
     height: auto;
     display: block;
-}
-
-.thumbnailOverlay-text-main {
-    padding: 10px;
-    font-size: 1.5rem;
 }
 
 .close .accordionItemContent {
@@ -251,138 +239,149 @@ h1 {
     background-color: #007399;
 }
 
-/*/////////////////////////////////////////////////// FILM STILLS */
-.stillsGallery-img {
+/* //////////////////////////////////////////////////LIGHTBOX */
+.hydra-iframe-container {
+    position: relative;
+    width: 90vw;
+    /* Adjust based on desired max width */
+    max-width: 1280px;
+    /* Adjust based on desired max width */
+    height: 0;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hydraGallery {
+    display: flex;
+    /* Flex wrap is the 5x2 grid */
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.hydraThumbnail {
+    /* Flex is the 5x2 grid */
+    flex: 1 0 19%;
+    position: relative;
+    /* margin: 10px; */
     cursor: pointer;
+    transition: transform 0.7s;
+    overflow: hidden;
+}
+
+.hydraThumbnail img {
     max-width: 100%;
     height: auto;
-    padding: 0 5px;
+    transition: transform 0.7s ease;
 }
 
-.stillsGallery-img:hover {
-    scale: 1.025;
-}
-
-.stillsLightbox {
-    display: none;
-    position: fixed;
-    z-index: 999;
-    width: 100%;
-    height: 100%;
+.hydraThumbnail::before {
+    content: "";
+    position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.7s ease;
+    z-index: 1;
 }
 
-.stillsLightbox-img {
-    max-width: 80%;
-    max-height: 80%;
+.hydraThumbnail:hover::before {
+    opacity: 1;
+}
+
+.hydraThumbnail:hover img {
+    transform: scale(1.05);
+}
+
+.hydraOverlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.hydraThumbnail .hydraOverlay {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-
-.stillsClose {
-    position: absolute;
-    top: 10px;
-    right: 50px;
-    color: whitesmoke;
-    font-size: 50px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/*////////////////////////////////////////////////////// VIDEO GALLERY */
-.videoGallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px 10px;
-}
-
-.videoImageThumbnail {
-    flex: 1 0 19%;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-}
-
-.videoImageThumbnail img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s;
-}
-
-.thumbnailOverlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.7);
     color: whitesmoke;
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.8s;
+    z-index: 2;
 }
 
-.thumbnailOverlay-text {
-    padding: 10px;
-    text-align: center;
-}
-
-.videoImageThumbnail:hover img {
-    transform: scale(1.01);
-}
-
-.videoImageThumbnail:hover .thumbnailOverlay {
+.hydraThumbnail:hover .hydraOverlay {
     opacity: 1;
 }
 
-.videoLightbox {
-    display: none;
+#hydraVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+
+#hydraLightbox {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 
-.videoLightboxContent {
+#hydraLightbox.hidden {
+    display: none;
+}
+
+#hydraLightbox iframe {
     max-width: 1280px;
-    width: 90%;
-    height: auto;
-    margin: auto;
-}
-
-.videoCloseButton {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    font-size: 30px;
-    color: whitesmoke;
-    cursor: pointer;
-}
-
-.videoGalleryContainer {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    width: 100%;
-}
-
-.videoGalleryContainer iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
+    max-height: 720px;
     width: 100%;
     height: 100%;
+}
+
+.hydraLightbox-image {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    /* Ensures the image doesn't have any extra spacing */
+    margin: 0 auto;
+    /* Centers the image */
+}
+
+#hydraCloseBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: whitesmoke;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 50%;
+    z-index: 3;
+}
+
+#hydraCloseBtn:focus {
+    outline: none;
 }
 
 /* //////////////////////////////////////////////////SHAPE DIVIDER */
@@ -464,10 +463,6 @@ footer {
         margin: auto 5%;
     }
 
-    .responsive-iframe {
-        height: 100%;
-    }
-    
     .image-grid {
         display: block;
         justify-content: center;
@@ -475,11 +470,6 @@ footer {
 
     .pageName {
         text-align: center;
-    }
-
-    .thumbnailOverlay-text-main {
-        padding: 10px;
-        font-size: 1rem;
     }
 
     .grid-container {
@@ -500,10 +490,6 @@ footer {
 
     .item2 {
         justify-content: center;
-    }
-
-    .videoImageThumbnail {
-        flex: 1 0 50%;
     }
 
     .contactBio {

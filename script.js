@@ -55,47 +55,43 @@ images.forEach(image => {
     });
 });
 
-// FILM STILLS
-const galleryImgs = document.querySelectorAll('.stillsGallery-img');
-const stillsLightbox = document.querySelector('.stillsLightbox');
-const lightboxImg = document.querySelector('.stillsLightbox-img');
-const closeBtn = document.querySelector('.stillsClose');
+// LIGHTBOX - NEW
+const thumbnails = document.querySelectorAll(".hydraThumbnail");
+const lightbox = document.getElementById("hydraLightbox");
+const closeBtn = document.getElementById("hydraCloseBtn");
+const lightboxContent = document.querySelector(".hydraLightbox-content");
 
-galleryImgs.forEach((img) => {
-    img.addEventListener('click', () => {
-        stillsLightbox.style.display = 'flex';
-        lightboxImg.src = img.src;
-    });
+thumbnails.forEach((thumbnail) => {
+    thumbnail.addEventListener("click", () => openLightbox(thumbnail));
 });
 
-closeBtn.addEventListener('click', () => {
-    stillsLightbox.style.display = 'none';
-});
+function openLightbox(thumbnail) {
+    const dataType = thumbnail.dataset.type;
+    const dataSrc = thumbnail.dataset.source;
 
-stillsLightbox.addEventListener('click', (event) => {
-    if (event.target === stillsLightbox || event.target === lightboxImg) {
-        stillsLightbox.style.display = 'none';
+    if (dataType === "video") {
+        lightboxContent.innerHTML = `<div class="hydra-iframe-container"><iframe id="hydraVideo" src="${dataSrc}" frameborder="0" allowfullscreen></iframe></div>`;
+    } else if (dataType === "image") {
+        const imageElement = new Image();
+        imageElement.src = dataSrc;
+        imageElement.alt = "Fullscreen Image";
+        imageElement.classList.add("hydraLightbox-image");
+
+        lightboxContent.innerHTML = ""; // Clear any previous content
+        lightboxContent.appendChild(imageElement);
     }
-});
 
-// VIDEO GALLERY
-function openLightbox(videoId) {
-    const videoLightbox = document.getElementById('videoLightbox');
-    const videoFrame = document.getElementById('videoFrame');
-    videoFrame.src = `https://www.youtube.com/embed/${videoId}`;
-    videoLightbox.style.display = 'flex';
+    lightbox.classList.remove("hidden");
 }
 
 function closeLightbox() {
-    const videoLightbox = document.getElementById('videoLightbox');
-    const videoFrame = document.getElementById('videoFrame');
-    videoFrame.src = '';
-    videoLightbox.style.display = 'none';
+    lightboxContent.innerHTML = "";
+    lightbox.classList.add("hidden");
 }
 
-window.addEventListener('click', (event) => {
-    const videoLightbox = document.getElementById('videoLightbox');
-    if (event.target === videoLightbox) {
+closeBtn.addEventListener("click", closeLightbox);
+lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) {
         closeLightbox();
     }
 });
