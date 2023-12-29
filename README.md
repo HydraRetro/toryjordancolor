@@ -9,5 +9,3 @@ Portfolio Website for a professional Film &amp; TV Colorist, Tory J Harder.
 E-MAIL: toryjordancolor@gmail.com
 
 INSTAGRAM: [@tj_harder](https://www.instagram.com/tj_harder/)
-
-[![Tory Jordan Harder IMDb](IMAGES/icons/IMDB_Logo_2016.svg.png)](https://www.imdb.com/name/nm8217243/){:width="128px"}
