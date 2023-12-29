@@ -6,6 +6,8 @@ Portfolio Website for a professional Film &amp; TV Colorist, Tory J Harder.
 </p>
 
 ## Socials
+[toryjordancolor.com](https://www.toryjordancolor.com/)
+
 E-MAIL: toryjordancolor@gmail.com
 
 INSTAGRAM: [@tj_harder](https://www.instagram.com/tj_harder/)
