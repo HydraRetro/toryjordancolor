@@ -306,6 +306,7 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
+    padding-bottom: 50px;
 }
 
 .hydraThumbnail {
