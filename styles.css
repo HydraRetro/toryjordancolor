@@ -310,7 +310,7 @@ h1 {
 
 .hydraThumbnail {
     /* Flex is the 5x2 grid */
-    flex: 1 0 19%;
+    flex: 1 0 20%;
     position: relative;
     cursor: pointer;
     transition: transform 0.7s;
@@ -387,7 +387,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
+    z-index: 100;
 }
 
 #hydraLightbox.hidden {
