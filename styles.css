@@ -7,7 +7,7 @@ html {
 }
 
 body {
-    max-width: 1920px;
+    /* max-width: 1920px; */
     margin: 0 auto;
     padding: 0 100px;
     font-family: 'Montserrat', sans-serif;
@@ -137,7 +137,7 @@ h1 {
 /*////////////////////////////////////////////////////// COLOR PAGE */
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
     max-width: 100%;
     margin: 0 auto;
@@ -311,7 +311,7 @@ h1 {
 
 .hydraThumbnail {
     /* Flex is the 5x2 grid */
-    flex: 1 0 20%;
+    flex: 1 0 15%;
     position: relative;
     cursor: pointer;
     transition: transform 0.7s;
@@ -436,7 +436,7 @@ h1 {
 /*////////////////////////////////////////////////////// CONTACT */
 .contactBio {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     gap: 20px;
 }
