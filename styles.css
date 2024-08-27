@@ -115,21 +115,23 @@ h1 {
 /* //////////////////////////////////////////////////////REEL PAGE */
 .containerReel {
     position: relative;
-    width: 100%;
-    /* max-width: 1280px; */
-    /* Adjust max-width as needed */
-    margin: 0 auto;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio (height/width = 9/16 = 0.5625) */
+    height: 0;
     overflow: hidden;
-    padding-top: 56.25%;
-    /* 16:9 Aspect Ratio */
+    max-width: 1280px;
+    max-height: 720px;
+    margin: 0 auto;
 }
 
-.reel-responsive-iframe {
+.containerReel iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    max-width: 1280px;
+    max-height: 720px;
 }
 
 /*////////////////////////////////////////////////////// COLOR PAGE */
