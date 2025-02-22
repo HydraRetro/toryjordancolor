@@ -40,7 +40,7 @@ function toggleItem() {
     itemClass.add(isItemOpen ? 'close' : 'open');
 
     accordionWrapper.style.display = isItemOpen ? 'grid' : 'block';
-    // accordionWrapper.style.maxWidth = isItemOpen ? '100%' : '90%';
+    accordionWrapper.style.maxWidth = isItemOpen ? '100%' : '90%';
 }
 
 // Scroll when image clicked

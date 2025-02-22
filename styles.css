@@ -18,10 +18,17 @@ body {
 }
 
 /*////////////////////////////////////////////////////// NAVBAR */
-.container {
+.navbar-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* .container {
     width: 100%;
     padding: 20px 0px;
-}
+} */
 
 /* navbar REGULAR */
 .site-navbar {
@@ -487,6 +494,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     margin: 10px 0px;
+    color: #007399;
 }
 
 .socialIcon {
